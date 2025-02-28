@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+      "baseUrl": "./src",
+      "paths": {
+        "@constants/*": ["constants/*"],
+        "@components/*": ["components/*"],
+        "@pages/*": ["pages/*"],
+        "@utils/*": ["utils/*"],
+        "@services/*": ["services/*"],
+        "@assets/*": ["assets/*"],
+        "@router": ["router.jsx"],
+        "@animations": ["animations/*"]
+      }
+    },
+    "exclude": ["node_modules", "dist"]
+}  
