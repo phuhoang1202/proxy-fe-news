@@ -76,7 +76,7 @@ export default function FAQSection() {
 
   return (
     <section
-      className='relative z-20 overflow-hidden h-[90vh] bg-compo pt-20 dark:bg-dark lg:pt-[80px]'
+      className='relative z-20 overflow-hidden h-[100vh] bg-compo pt-20 dark:bg-dark lg:pt-[80px]'
       // style={{
       //   background: `url(${bgFaq6})`,
       //   backgroundSize: 'cover',
@@ -99,7 +99,7 @@ export default function FAQSection() {
         </div>
       </div>
 
-      <div className='absolute left-1/3 -translate-x-1/3 z-30 w-1/3'>
+      <div className='absolute left-1/3 -translate-x-1/3 z-30 w-2/3 '>
         <Collapse
           size='large'
           defaultActiveKey={['1']}
@@ -115,8 +115,9 @@ export default function FAQSection() {
           }
         />
       </div>
-      <div className='absolute top-1/2 right-20 -translate-y-1/3 z-20'>
-        <Lottie animationData={Animation1} loop={true} className='w-[400px] md:w-[600px] lg:w-[800px]' />
+
+      <div className='absolute top-1/2 right-10 -translate-y-1/2 -z-[-1]'>
+        <Lottie animationData={Animation1} loop={true} className='w-[400px] md:w-[600px] lg:w-[700px]' />
       </div>
 
       <div>

@@ -139,7 +139,7 @@ export default function NewsAndEvents() {
                     </a>
                     <div className='absolute px-4 pt-7 pb-4 bottom-0 w-full bg-gradient-cover'>
                       <a href='#'>
-                        <h2 className='text-lg font-bold capitalize leading-tight text-white mb-1'>
+                        <h2 className='text-lg font-bold capitalize leading-tight text-black mb-1'>
                           News magazines are becoming obsolete, replaced by gadgets
                         </h2>
                       </a>

@@ -92,7 +92,7 @@ export default function Navbar() {
               className='flex items-center justify-end pr-16 lg:pr-0 cursor-pointer'
               onClick={() => setDarkMode(!darkMode)}
             >
-              <span className=' text-white '>{darkMode ? <IconUnDark /> : <IconDark />}</span>
+              {/* <span className=' text-white '>{darkMode ? <IconUnDark /> : <IconDark />}</span> */}
             </div>
 
             <div className='hidden sm:flex'>

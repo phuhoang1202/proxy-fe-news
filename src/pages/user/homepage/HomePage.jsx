@@ -43,7 +43,7 @@ export default function HomePage() {
       {/* <BlogSection /> */}
       {/* ====== Blog Section End */}
       {/* ====== Contact Start ====== */}
-      <ContactSection />
+      {/* <ContactSection /> */}
       {/* ====== Contact End ====== */}
       {/* ====== New and Events start ======  */}
       <NewsAndEvents />
