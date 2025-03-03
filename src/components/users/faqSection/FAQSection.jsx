@@ -109,7 +109,7 @@ export default function FAQSection() {
         </div>
       </div>
 
-      <div className='absolute left-1/3 -translate-x-1/3 z-30 lg:w-1/3 w-full'>
+      <div className='absolute left-1/3 -translate-x-1/3 z-30 lg:w-2/3 w-full'>
         <Collapse
           size='large'
           defaultActiveKey={['1']}
