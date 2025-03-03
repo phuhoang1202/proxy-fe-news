@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import worldMap from '@assets/images/about/world-map.webp'
 import Lottie from 'lottie-react'
 import Animation15 from '@animations/Animation15.json'
@@ -7,6 +7,17 @@ import { Statistic, Tooltip } from 'antd'
 import CountUp from 'react-countup'
 
 export default function AboutSection() {
+  const [fontSize, setFontSize] = useState(window.innerWidth <= 768 ? '50px' : '180px')
+
+  useEffect(() => {
+    const handleResize = () => {
+      setFontSize(window.innerWidth <= 768 ? '50px' : '180px')
+    }
+
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
   const locations = [
     {
       name: 'Brazil',
@@ -146,11 +157,11 @@ export default function AboutSection() {
   ]
 
   return (
-    <section id='about' className='bg-gray-1 pb-8 pt-8 dark:bg-dark-2 lg:pb-[70px] lg:pt-10 z-30 relative'>
+    <section id='about' className='bg-gray-1 dark:bg-dark-2 pb-14 lg:pb-[60px] z-30 relative'>
       <div className='container z-30'>
         <div className='wow fadeInUp' data-wow-delay='.2s'>
           <div className='text-center z-30'>
-            <h2 className='text-4xl font-bold'>Mua proxy IPv4, IPv6 toàn thế giới</h2>
+            <h2 className='lg:text-4xl text-largerPrdName font-bold'>Mua proxy IPv4, IPv6 toàn thế giới</h2>
 
             <div className='relative z-20 mt-8'>
               <img src={worldMap} alt='World Map' />
@@ -177,7 +188,7 @@ export default function AboutSection() {
                           <p className='text-textPrd font-medium mx-auto'>{location.content}</p>
                           <div className='mx-auto'>
                             <button
-                              className='w-72 h-11 text-black text-textPrd font-semibold py-2 px-4 rounded flex items-center justify-center shadow-lg transition-transform transform active:scale-95'
+                              className='lg:w-72 w-60 h-11 text-black text-textPrd font-semibold py-2 px-4 rounded flex items-center justify-center shadow-lg transition-transform transform active:scale-95'
                               style={{
                                 background: 'linear-gradient(to right, #2B5876, #4E4376)',
                               }}
@@ -197,21 +208,25 @@ export default function AboutSection() {
                 </div>
               ))}
 
-              <div className='absolute -bottom-[10%] right-[10%] text-center'>
-                <div className='flex items-center gap-2'>
-                  <Statistic
-                    value={195}
-                    valueStyle={{
-                      fontWeight: 'bold',
-                      fontSize: '180px',
-                      background:
-                        'linear-gradient(30deg, rgba(24, 17, 75, 1) 30%, rgba(45, 43, 116, 1) 60%, rgba(80, 84, 182, 1) 100%)',
-                      WebkitBackgroundClip: 'text',
-                      WebkitTextFillColor: 'transparent',
-                    }}
-                    formatter={(value) => <CountUp end={value} duration={2.5} />}
-                  />
-                  <p className='text-bigPrdName font-semibold mt-24'>Quốc gia và vùng lãnh thổ</p>
+              <div className='absolute -bottom-[10%] lg:right-[10%]  text-center'>
+                <div className='flex lg:flex-row flex-col lg:items-center items-start lg:gap-2'>
+                  <div>
+                    <Statistic
+                      value={195}
+                      valueStyle={{
+                        fontWeight: 'bold',
+                        fontSize: fontSize,
+                        background:
+                          'linear-gradient(30deg, rgba(24, 17, 75, 1) 30%, rgba(45, 43, 116, 1) 60%, rgba(80, 84, 182, 1) 100%)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                      }}
+                      formatter={(value) => <CountUp start={0} end={value} duration={3} />}
+                    />
+                  </div>
+                  <p className='lg:text-bigPrdName text-textPrd font-semibold lg:mt-24 mt-2'>
+                    Quốc gia và vùng lãnh thổ
+                  </p>
                 </div>
               </div>
             </div>
@@ -220,7 +235,7 @@ export default function AboutSection() {
       </div>
 
       <div>
-        <span className='absolute left-4 top-4 -z-[1]'>
+        <span className='absolute left-4 top-4 -z-[1] lg:block hidden'>
           <svg width={48} height={134} viewBox='0 0 48 134' fill='none' xmlns='http://www.w3.org/2000/svg'>
             <circle cx='45.6673' cy={132} r='1.66667' transform='rotate(180 45.6673 132)' fill='#13C296' />
             <circle cx='45.6673' cy='117.333' r='1.66667' transform='rotate(180 45.6673 117.333)' fill='#13C296' />
@@ -264,7 +279,7 @@ export default function AboutSection() {
             <circle cx='1.66732' cy='1.66683' r='1.66667' transform='rotate(180 1.66732 1.66683)' fill='#13C296' />
           </svg>
         </span>
-        <span className='absolute bottom-4 right-4 -z-[1]'>
+        <span className='absolute bottom-4 right-4 -z-[1] lg:block hidden'>
           <svg width={48} height={134} viewBox='0 0 48 134' fill='none' xmlns='http://www.w3.org/2000/svg'>
             <circle cx='45.6673' cy={132} r='1.66667' transform='rotate(180 45.6673 132)' fill='#3758F9' />
             <circle cx='45.6673' cy='117.333' r='1.66667' transform='rotate(180 45.6673 117.333)' fill='#3758F9' />

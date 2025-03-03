@@ -36,14 +36,17 @@ export default function Features() {
   ]
 
   return (
-    <section className='relative z-20 pb-8 pt-20 dark:bg-dark lg:pb-[70px] lg:pt-[120px]'>
+    <section className='relative z-20  dark:bg-dark py-14 lg:py-16'>
       <div className='container'>
         <div className='-mx-4 flex flex-wrap'>
           <div className='w-full px-4'>
             <div className='mx-auto mb-12 max-w-[485px] text-center lg:mb-[70px]'>
               {/* <span className='mb-2 block text-lg font-semibold text-primary'>Features</span> */}
               <h2 className='mb-3 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]'>
-                Tại sao nên lựa chọn <br /> <span className='text-logo'>SENPROXIES</span>
+                <div>Tại sao nên lựa chọn</div>
+                <div className='mt-2'>
+                  <span className='text-logo'>SENPROXIES</span>
+                </div>
               </h2>
               <p className='text-base text-body-color dark:text-dark-6'>
                 Cung cấp cho bạn một giải pháp IPv4 và IPv6 tại quốc gia mà bạn cần với chi phí tối ưu và trải nghiệm

@@ -8,6 +8,7 @@ import Features from '@components/users/features/Features'
 import HeroSection from '@components/users/heroSection/HeroSection'
 import NewsAndEvents from '@components/users/newsAndEvents/NewsAndEvents'
 import PricingSection from '@components/users/pricingSection/PricingSection'
+import SectionWrapper from '@components/users/sectionWrapper/SectionWrapper'
 import TeamSection from '@components/users/teamSection/TeamSection'
 import TestimonialSection from '@components/users/testimonial/TestimonialSection'
 import React from 'react'
@@ -16,13 +17,20 @@ export default function HomePage() {
   return (
     <>
       {/* ====== Hero Section Start */}
-      <HeroSection />
+      <SectionWrapper>
+        <HeroSection />
+      </SectionWrapper>
+
       {/* ====== Hero Section End */}
       {/* ====== Features Section Start */}
-      <Features />
+      <SectionWrapper>
+        <Features />
+      </SectionWrapper>
       {/* ====== Features Section End */}
       {/* ====== About Section Start */}
-      <AboutSection />
+      <SectionWrapper>
+        <AboutSection />
+      </SectionWrapper>
       {/* ====== About Section End */}
       {/* ====== CTA Section Start */}
       <CTASection />

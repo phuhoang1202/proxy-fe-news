@@ -35,7 +35,7 @@ export default function ScrollToTopButton() {
 
   return (
     <div>
-      <div className='fixed bottom-10 right-10 flex justify-center items-center rounded-full z-50 duration-300 ease-in-out'>
+      <div className='fixed bottom-10 lg:right-10 right-4 flex justify-center items-center rounded-full z-50 duration-300 ease-in-out'>
         <div className='flex flex-col gap-4'>
           <div className='relative cursor-pointer'>
             <img
@@ -46,9 +46,9 @@ export default function ScrollToTopButton() {
             <div className='pulse'></div>
           </div>
 
-          <button className='h-12 w-12 rounded-full' style={{ boxShadow: 'rgba(0, 0, 0, 0.3) 0px 5px 10px' }}>
+          {/* <button className='h-12 w-12 rounded-full' style={{ boxShadow: 'rgba(0, 0, 0, 0.3) 0px 5px 10px' }}>
             <img src={IconFB} alt='icon' className='w-full h-full object-cover' />
-          </button>
+          </button> */}
 
           <button className='h-12 w-12 rounded-full' style={{ boxShadow: 'rgba(0, 0, 0, 0.3) 0px 5px 10px' }}>
             <img src={IconZL} alt='icon' className='w-full h-full object-cover' />

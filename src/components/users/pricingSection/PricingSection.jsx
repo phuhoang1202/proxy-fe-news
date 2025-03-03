@@ -67,7 +67,7 @@ export default function PricingSection() {
   const CustomPrevArrow = ({ onClick }) => (
     <button
       onClick={onClick}
-      className='absolute left-[-50px] top-1/2 -translate-y-1/2 z-10 flex items-center justify-center rounded-full w-14 h-14 transition-shadow duration-300 shadow-md hover:shadow-[0px_7px_29px_rgba(100,100,111,0.2)]'
+      className='absolute lg:left-[-50px] left-[-15px] top-1/2 -translate-y-1/2 z-10 flex items-center justify-center rounded-full w-14 h-14 transition-shadow duration-300 shadow-md hover:shadow-[0px_7px_29px_rgba(100,100,111,0.2)]'
     >
       <img src={iconArrowLeft} alt='icon' className='w-full h-full object-cover' />
     </button>
@@ -76,7 +76,7 @@ export default function PricingSection() {
   const CustomNextArrow = ({ onClick }) => (
     <button
       onClick={onClick}
-      className='absolute right-[-50px] top-1/2 -translate-y-1/2 z-10 flex items-center justify-center rounded-full w-14 h-14 shadow-md hover:shadow-[0px_7px_29px_rgba(100,100,111,0.2)]'
+      className='absolute lg:right-[-50px] right-[-15px] top-1/2 -translate-y-1/2 z-10 flex items-center justify-center rounded-full w-14 h-14 shadow-md hover:shadow-[0px_7px_29px_rgba(100,100,111,0.2)]'
     >
       <img src={iconArrowRight} alt='icon' className='w-full h-full object-cover' />
     </button>
@@ -94,14 +94,14 @@ export default function PricingSection() {
     afterChange: (index) => setCurrentSlide(index),
     responsive: [
       {
-        breakpoint: 1024, // Khi màn hình nhỏ hơn 1024px
+        breakpoint: 1024,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 768, // Khi màn hình nhỏ hơn 768px
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -111,10 +111,7 @@ export default function PricingSection() {
   }
 
   return (
-    <section
-      id='pricing'
-      className='relative z-20 overflow-hidden bg-[#F7F7F1] pb-12 pt-20 dark:bg-dark lg:pb-[90px] lg:pt-[120px]'
-    >
+    <section id='pricing' className='relative z-20 overflow-hidden bg-[#F7F7F1] dark:bg-dark py-10 lg:py-16'>
       <div className='container mx-auto'>
         <div className='text-center mb-10'>
           <span className='mb-2 block text-largerPrdName text-[#3B3B3B] font-semibold'>Bảng giá</span>
@@ -147,7 +144,7 @@ export default function PricingSection() {
                   >
                     {plan.recommended && (
                       <p
-                        className='absolute right-[-40px] top-[55px] inline-block -rotate-90  bg-[#213A57] px-4 py-2 text-small font-medium text-white'
+                        className='absolute lg:right-[-40px] right-[-30px] top-[55px] inline-block -rotate-90  bg-[#213A57] lg:px-4 px-2 lg:py-2 py-1 lg:text-small text-[12px] font-medium text-white'
                         style={{ borderRadius: '8px 8px 0 0' }}
                       >
                         Khuyến khích
@@ -180,7 +177,7 @@ export default function PricingSection() {
                       </ul>
 
                       <div className='flex flex-col gap-4 justify-center mt-8 '>
-                        <h2 className='mb-4 text-4xl mx-auto font-semibold text-dark dark:text-white xl:text-[42px] xl:leading-[1.21]'>
+                        <h2 className='mb-4 lg:text-biggerName text-largerPrdName mx-auto font-semibold text-dark dark:text-white xl:leading-[1.21]'>
                           <span className='text-[#3B3B3B]'>{formatNumber(plan.price)}</span>
                           <span className={`text-[#3B3B3B] text-base font-normal`}> VNĐ/ Tháng</span>
                         </h2>
