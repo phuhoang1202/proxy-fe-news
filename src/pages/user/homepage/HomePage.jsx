@@ -33,7 +33,9 @@ export default function HomePage() {
       </SectionWrapper>
       {/* ====== About Section End */}
       {/* ====== CTA Section Start */}
-      <CTASection />
+      <SectionWrapper>
+        <CTASection />
+      </SectionWrapper>
       {/* ====== CTA Section End */}
       {/* ====== Pricing Section Start */}
       <PricingSection />

@@ -12,19 +12,9 @@ import iconCheck from '@assets/images/pricing/iconCheck.png'
 export default function PricingSection() {
   const pricingPlans = [
     {
-      name: 'Gói 20 Proxy',
-      price: 200000,
-      address: ['Vương Quốc Anh', 'Mỹ', 'Singapore', 'Úc'],
-      ipv4: '20 IPv4 Datacenter',
-      networkSpeed: '10 Gbps',
-      option: 'HTTP(S)/SOCKS5',
-      security: 'Có User & Pass',
-      recommended: false,
-    },
-    {
       name: 'Gói 50 Proxy',
       price: 475000,
-      address: ['Vương Quốc Anh', 'Mỹ', 'Singapore', 'Úc'],
+      address: ['Mỹ', 'Anh', 'Singapore', 'Úc'],
       ipv4: '50 IPv4 Datacenter',
       networkSpeed: '10 Gbps',
       option: 'HTTP(S)/SOCKS5',
@@ -34,7 +24,7 @@ export default function PricingSection() {
     {
       name: 'Gói 100 Proxy',
       price: 900000,
-      address: ['Vương Quốc Anh', 'Mỹ', 'Singapore', 'Úc'],
+      address: ['Mỹ', 'Anh', 'Singapore', 'Úc'],
       ipv4: '100 IPv4 Datacenter',
       networkSpeed: '10 Gbps',
       option: 'HTTP(S)/SOCKS5',
@@ -44,7 +34,7 @@ export default function PricingSection() {
     {
       name: 'Gói 200 Proxy',
       price: 1700000,
-      address: ['Vương Quốc Anh', 'Mỹ', 'Singapore', 'Úc'],
+      address: ['Mỹ', 'Anh', 'Singapore', 'Úc'],
       ipv4: '200 IPv4 Datacenter',
       networkSpeed: '10 Gbps',
       option: 'HTTP(S)/SOCKS5',
@@ -54,11 +44,21 @@ export default function PricingSection() {
     {
       name: 'Gói 500 Proxy',
       price: 4000000,
-      address: ['Vương Quốc Anh', 'Mỹ', 'Singapore', 'Úc'],
+      address: ['Mỹ', 'Anh', 'Singapore', 'Úc'],
       ipv4: '500 IPv4 Datacenter',
       networkSpeed: '10 Gbps',
       option: 'HTTP(S)/SOCKS5',
       security: 'Có User & Pass',
+    },
+    {
+      name: 'Gói 20 Proxy',
+      price: 200000,
+      address: ['Mỹ', 'Anh', 'Singapore', 'Úc'],
+      ipv4: '20 IPv4 Datacenter',
+      networkSpeed: '10 Gbps',
+      option: 'HTTP(S)/SOCKS5',
+      security: 'Có User & Pass',
+      recommended: false,
     },
   ]
 
@@ -154,23 +154,23 @@ export default function PricingSection() {
                       <h3 className='text-largerPrdName font-bold text-center'>{plan.name}</h3>
 
                       <ul className='mt-6 flex flex-col gap-2 w-full'>
-                        <li className='text-normal flex items-center gap-1'>
+                        <li className='lg:text-normal text-small flex items-center gap-1'>
                           <img src={iconCheck} alt='icon' className='h-4 w-4' />
                           <strong>IPv4:</strong> {plan.ipv4}
                         </li>
-                        <li className='text-normal flex items-center gap-1'>
+                        <li className='lg:text-normal text-small flex items-center gap-1'>
                           <img src={iconCheck} alt='icon' className='h-4 w-4' />
                           <strong>Tốc độ mạng:</strong> {plan.networkSpeed}
                         </li>
-                        <li className='text-normal flex items-center gap-1'>
+                        <li className='lg:text-normal text-small flex items-center gap-1'>
                           <img src={iconCheck} alt='icon' className='h-4 w-4' />
-                          <strong>Vị trí:</strong> {plan.address.join(', ')}
+                          <strong>Vị trí:</strong> <span>{plan.address.join(', ')}</span>
                         </li>
-                        <li className='text-normal flex items-center gap-1'>
+                        <li className='lg:text-normal text-small flex items-center gap-1'>
                           <img src={iconCheck} alt='icon' className='h-4 w-4' />
                           <strong>Tùy chọn:</strong> {plan.option}
                         </li>
-                        <li className='text-normal flex items-center gap-1'>
+                        <li className='lg:text-normal text-small flex items-center gap-1'>
                           <img src={iconCheck} alt='icon' className='h-4 w-4' />
                           <strong>Bảo mật:</strong> {plan.security}
                         </li>
@@ -178,7 +178,7 @@ export default function PricingSection() {
 
                       <div className='flex flex-col gap-4 justify-center mt-8 '>
                         <h2 className='mb-4 lg:text-biggerName text-largerPrdName mx-auto font-semibold text-dark dark:text-white xl:leading-[1.21]'>
-                          <span className='text-[#3B3B3B]'>{formatNumber(plan.price)}</span>
+                          <span className='text-[#3B3B3B] font-bold'>{formatNumber(plan.price)}</span>
                           <span className={`text-[#3B3B3B] text-base font-normal`}> VNĐ/ Tháng</span>
                         </h2>
 

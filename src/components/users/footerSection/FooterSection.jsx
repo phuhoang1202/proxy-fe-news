@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import IconFB from '@assets/icons/user/IconFB.png'
 import IconZL from '@assets/icons/user/IconZL.svg'
 import IconTelegram from '@assets/icons/user/IconTelegram.svg'
+import IconPhone from '@assets/icons/user/IconPhone.svg'
 
 export default function FooterSection() {
   const menuItems = [
@@ -31,20 +32,20 @@ export default function FooterSection() {
   ]
 
   const socialNetwork = [
-    // {
-    //   images: IconFB,
-    //   altImg: 'Facebook',
-    //   linkSocial: '/',
-    // },
+    {
+      images: IconPhone,
+      altImg: 'Phone',
+      linkSocial: 'tel:0368864688',
+    },
     {
       images: IconZL,
       altImg: 'Zalo',
-      linkSocial: '/',
+      linkSocial: 'https://zalo.me/0368864688',
     },
     {
       images: IconTelegram,
       altImg: 'Telegram',
-      linkSocial: '/',
+      linkSocial: 'https://t.me/phantoan116',
     },
   ]
 
@@ -65,9 +66,24 @@ export default function FooterSection() {
               <div className='-mx-3 flex items-center'>
                 {socialNetwork.map((social, index) => {
                   return (
-                    <Link to={social.linkSocial} className='px-3 text-gray-7 hover:text-white' key={index}>
-                      <img src={social.images} alt='icon' className='w-10' />
-                    </Link>
+                    <a
+                      href={social.linkSocial}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='px-3 text-gray-7 hover:text-white cursor-pointer'
+                      key={index}
+                    >
+                      {social.altImg === 'Phone' ? (
+                        <div
+                          className='rounded-full p-3 w-11 cursor-pointer'
+                          style={{ background: 'linear-gradient(#8a82fb, #407ed7)' }}
+                        >
+                          <img src={social.images} alt='icon' className='w-8' />
+                        </div>
+                      ) : (
+                        <img src={social.images} alt='icon' className='w-10' />
+                      )}
+                    </a>
                   )
                 })}
               </div>

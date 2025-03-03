@@ -12,7 +12,7 @@ import Animation11 from '@animations/Animation11.json'
 
 export default function HeroSection() {
   return (
-    <div id='home' className='relative overflow-hidden lg:py-20 lg:h-screen h-[90vh] dark:bg-dark bg-compo'>
+    <div id='home' className='relative overflow-hidden lg:py-20 lg:h-screen h-[95vh] dark:bg-dark bg-compo'>
       <div className='z-10'>
         <ParticlesComponent />
       </div>

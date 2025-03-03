@@ -37,26 +37,32 @@ export default function ScrollToTopButton() {
     <div>
       <div className='fixed bottom-10 lg:right-10 right-4 flex justify-center items-center rounded-full z-50 duration-300 ease-in-out'>
         <div className='flex flex-col gap-4'>
-          <div className='relative cursor-pointer'>
-            <img
-              src={IconPhone}
-              alt='icon'
-              className='w-6 h-6 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 shake-stop'
-            />
-            <div className='pulse'></div>
-          </div>
+          <a href='tel:0368864688'>
+            <div className='relative cursor-pointer'>
+              <img
+                src={IconPhone}
+                alt='icon'
+                className='w-6 h-6 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 shake-stop'
+              />
+              <div className='pulse'></div>
+            </div>
+          </a>
 
           {/* <button className='h-12 w-12 rounded-full' style={{ boxShadow: 'rgba(0, 0, 0, 0.3) 0px 5px 10px' }}>
             <img src={IconFB} alt='icon' className='w-full h-full object-cover' />
           </button> */}
 
-          <button className='h-12 w-12 rounded-full' style={{ boxShadow: 'rgba(0, 0, 0, 0.3) 0px 5px 10px' }}>
-            <img src={IconZL} alt='icon' className='w-full h-full object-cover' />
-          </button>
+          <a href='https://zalo.me/0368864688' target='_blank' rel='noopener noreferrer'>
+            <button className='h-12 w-12 rounded-full' style={{ boxShadow: 'rgba(0, 0, 0, 0.3) 0px 5px 10px' }}>
+              <img src={IconZL} alt='icon' className='w-full h-full object-cover' />
+            </button>
+          </a>
 
-          <button className='h-12 w-12 rounded-full' style={{ boxShadow: 'rgba(0, 0, 0, 0.3) 0px 5px 10px' }}>
-            <img src={IconTelegram} alt='icon' className='w-full h-full object-cover' />
-          </button>
+          <a href='https://t.me/phantoan116' target='_blank' rel='noopener noreferrer'>
+            <button className='h-12 w-12 rounded-full' style={{ boxShadow: 'rgba(0, 0, 0, 0.3) 0px 5px 10px' }}>
+              <img src={IconTelegram} alt='icon' className='w-full h-full object-cover' />
+            </button>
+          </a>
 
           {isVisible && (
             <button
