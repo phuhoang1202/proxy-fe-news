@@ -4,12 +4,19 @@ import { motion } from 'framer-motion'
 export default function SectionWrapper({ children }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      viewport={{ once: true }}
+      initial='hidden'
+      whileInView='visible'
+      transition={{ staggerChildren: 0.2 }}
+      viewport={{ once: true, amount: 0.2 }}
     >
-      {children}
+      <motion.div
+        variants={{
+          hidden: { opacity: 0, y: 50 },
+          visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+        }}
+      >
+        {children}
+      </motion.div>
     </motion.div>
   )
 }

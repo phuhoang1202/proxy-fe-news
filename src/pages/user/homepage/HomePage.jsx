@@ -38,13 +38,17 @@ export default function HomePage() {
       </SectionWrapper>
       {/* ====== CTA Section End */}
       {/* ====== Pricing Section Start */}
-      <PricingSection />
+      <SectionWrapper>
+        <PricingSection />
+      </SectionWrapper>
       {/* ====== Pricing Section End */}
       {/* ====== Testimonial Section Start */}
       {/* <TestimonialSection /> */}
       {/* ====== Testimonial Section End */}
       {/* ====== FAQ Section Start */}
-      <FAQSection />
+      <SectionWrapper>
+        <FAQSection />
+      </SectionWrapper>
       {/* ====== FAQ Section End */}
       {/* ====== Team Section Start */}
       {/* <TeamSection /> */}
@@ -56,7 +60,9 @@ export default function HomePage() {
       {/* <ContactSection /> */}
       {/* ====== Contact End ====== */}
       {/* ====== New and Events start ======  */}
-      <NewsAndEvents />
+      <SectionWrapper>
+        <NewsAndEvents />
+      </SectionWrapper>
       {/* ====== New and Events end ======  */}
       {/* ====== Brands Section Start */}
       {/* <BrandsSection /> */}
