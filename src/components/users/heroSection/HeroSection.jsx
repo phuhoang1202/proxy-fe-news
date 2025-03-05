@@ -51,17 +51,21 @@ export default function HeroSection() {
                 Dịch Vụ Proxy chất lượng cao
               </h1>
 
-              <p className='mb-9 lg:max-w-[600px] font-medium text-white lg:text-[24px]  text-textPrd sm:leading-[1.44]'>
+              <p className='mb-9 lg:max-w-[600px] font-medium text-white lg:text-[24px] text-textPrd sm:leading-[1.44]'>
                 Giải pháp bảo vệ tài khoản thương mại điện tử, nâng cao hiệu quả hoạt động thương mại điện tử xuyên biên
                 giới.
               </p>
 
               <div className='flex lg:flex-row flex-col items-center gap-4'>
-                <button className='btn-77 w-60 h-14'>Khám phá thêm</button>
+                <Link to={'https://app.senproxies.com/'}>
+                  <button className='btn-77 w-60 h-14'>Khám phá thêm</button>
+                </Link>
 
-                <button className='flex items-center justify-center gap-4 rounded-md bg-white/[0.12] h-14 w-60 px-6 py-[10px] text-base font-medium text-white transition duration-300 ease-in-out hover:bg-white hover:text-dark uppercase'>
-                  Liên hệ CSKH
-                </button>
+                <Link to={'https://app.senproxies.com/'}>
+                  <button className='flex items-center justify-center gap-4 rounded-md bg-white/[0.12] h-14 w-60 px-6 py-[10px] text-base font-medium text-white transition duration-300 ease-in-out hover:bg-white hover:text-dark uppercase'>
+                    Liên hệ CSKH
+                  </button>
+                </Link>
               </div>
 
               {/* <ul className='mb-10 flex items-center gap-4'>
@@ -87,7 +91,7 @@ export default function HeroSection() {
           </div>
 
           <div className='absolute lg:-right-80 -right-40 lg:-top-40 z-30'>
-            <div className='wow fadeInUp mx-auto' data-wow-delay='.25s'>
+            <div className='mx-auto'>
               <div className='mt-16'>
                 <Lottie animationData={bgBanner4} loop={true} className='lg:w-[1300px] w-[700px] z-30' />
               </div>

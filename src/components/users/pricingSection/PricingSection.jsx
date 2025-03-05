@@ -8,6 +8,7 @@ import bgCard2 from '@assets/images/pricing/bgCard2.svg'
 import iconArrowLeft from '@assets/images/pricing/iconArrowLeft.svg'
 import iconArrowRight from '@assets/images/pricing/iconArrowRight.svg'
 import iconCheck from '@assets/images/pricing/iconCheck.png'
+import { Link } from 'react-router-dom'
 
 export default function PricingSection() {
   const pricingPlans = [
@@ -182,7 +183,9 @@ export default function PricingSection() {
                           <span className={`text-[#3B3B3B] text-base font-normal`}> VNĐ/ Tháng</span>
                         </h2>
 
-                        <button className='btn-777'>Mua ngay</button>
+                        <Link to={'https://app.senproxies.com/'}>
+                          <button className='btn-777'>Mua ngay</button>
+                        </Link>
                       </div>
                     </div>
                   </div>

@@ -57,7 +57,7 @@ export default function Navbar() {
           <div className='px-4'>
             <Link to={'/'} className='flex items-center gap-0'>
               <img src={Logo} alt='logo' className='header-logo w-20' />
-              <strong className='text-logo lg:text-biggerName text-textPrd'>Senproxies</strong>
+              <strong className='text-logo lg:text-[32px] text-textPrd'>Senproxies</strong>
             </Link>
           </div>
           <div className='flex w-full items-center justify-between px-4'>

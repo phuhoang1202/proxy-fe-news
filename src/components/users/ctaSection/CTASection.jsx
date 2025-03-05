@@ -1,6 +1,7 @@
 import React from 'react'
 import Lottie from 'lottie-react'
 import Animation10 from '@animations/Animation10.json'
+import { Link } from 'react-router-dom'
 
 export default function CTASection() {
   return (
@@ -24,9 +25,11 @@ export default function CTASection() {
                 {/* <div className='inline-block rounded-md border border-transparent px-7 py-3 text-base font-medium transition cursor-pointer '>
                   Bắt đầu ngay
                 </div> */}
-                <button className='gap-4 rounded-md bg-white/[0.12] h-14 w-60 px-6 py-[10px] text-base font-medium text-white transition duration-300 ease-in-out hover:bg-white hover:text-dark uppercase mt-4'>
-                  Liên hệ CSKH
-                </button>
+                <Link to={'https://app.senproxies.com/'}>
+                  <button className='gap-4 rounded-md bg-white/[0.12] h-14 w-60 px-6 py-[10px] text-base font-medium text-white transition duration-300 ease-in-out hover:bg-white hover:text-dark uppercase mt-4'>
+                    Liên hệ CSKH
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

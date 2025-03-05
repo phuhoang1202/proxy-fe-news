@@ -5,6 +5,7 @@ import Animation15 from '@animations/Animation15.json'
 import Flag from 'react-world-flags'
 import { Statistic, Tooltip } from 'antd'
 import CountUp from 'react-countup'
+import { Link } from 'react-router-dom'
 
 export default function AboutSection() {
   const [fontSize, setFontSize] = useState(window.innerWidth <= 768 ? '50px' : '180px')
@@ -79,7 +80,7 @@ export default function AboutSection() {
       top: 'top-[48%]',
       right: 'right-[46%]',
       nameProxy: 'Proxy Nigeria',
-      ipProxy: '103.7.7.7',
+      ipProxy: '103.X.X.X',
       content: 'Proxy located in Nigeria',
     },
     {
@@ -88,7 +89,7 @@ export default function AboutSection() {
       top: 'top-[38%]',
       right: 'right-[22%]',
       nameProxy: 'Proxy Trung Quốc',
-      ipProxy: '103.8.8.8',
+      ipProxy: '103.X.X.X',
       content: 'Proxy located in China',
     },
     {
@@ -97,7 +98,7 @@ export default function AboutSection() {
       top: 'top-[38%]',
       right: 'right-[35%]',
       nameProxy: 'Proxy Thổ Nhĩ Kỳ',
-      ipProxy: '103.9.9.9',
+      ipProxy: '103.X.X.X',
       content: 'Proxy located in Turkey',
     },
     {
@@ -174,7 +175,7 @@ export default function AboutSection() {
                 >
                   <Tooltip
                     title={
-                      <div className=' p-4 rounded shadow-lg w-full'>
+                      <div className='p-4 rounded shadow-lg w-full text-[#3B3B3B]'>
                         <div className='flex flex-col gap-4'>
                           <div className='flex items-center gap-6 ml-4'>
                             <div className='w-24 h-18 shadow-sm border rounded-sm'>
@@ -187,14 +188,16 @@ export default function AboutSection() {
                           </div>
                           <p className='text-textPrd font-medium mx-auto'>{location.content}</p>
                           <div className='mx-auto'>
-                            <button
-                              className='lg:w-72 w-60 h-11 text-black text-textPrd font-semibold py-2 px-4 rounded flex items-center justify-center shadow-lg transition-transform transform active:scale-95'
-                              style={{
-                                background: 'linear-gradient(to right, #2B5876, #4E4376)',
-                              }}
-                            >
-                              Mua Proxy
-                            </button>
+                            <Link to={'https://app.senproxies.com/'}>
+                              <button
+                                className='lg:w-72 w-60 h-11 text-black text-textPrd font-semibold py-2 px-4 rounded flex items-center justify-center shadow-lg transition-transform transform active:scale-95 text-white'
+                                style={{
+                                  background: 'linear-gradient(to right, #2B5876, #4E4376)',
+                                }}
+                              >
+                                Mua Proxy
+                              </button>
+                            </Link>
                           </div>
                         </div>
                       </div>
@@ -202,13 +205,14 @@ export default function AboutSection() {
                     placement='top'
                     overlayStyle={{ maxWidth: 'unset' }}
                     overlayInnerStyle={{ width: '380px', padding: 0 }}
+                    color={'white'}
                   >
                     <Lottie animationData={Animation15} loop={true} className='lg:w-10 md:w-6 w-4' />
                   </Tooltip>
                 </div>
               ))}
 
-              <div className='absolute -bottom-[10%] lg:right-[10%]  text-center'>
+              <div className='absolute -bottom-[10%] lg:right-[10%] text-center'>
                 <div className='flex lg:flex-row flex-col lg:items-center items-start lg:gap-2'>
                   <div>
                     <Statistic

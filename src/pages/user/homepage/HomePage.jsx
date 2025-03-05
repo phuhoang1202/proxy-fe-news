@@ -11,9 +11,29 @@ import PricingSection from '@components/users/pricingSection/PricingSection'
 import SectionWrapper from '@components/users/sectionWrapper/SectionWrapper'
 import TeamSection from '@components/users/teamSection/TeamSection'
 import TestimonialSection from '@components/users/testimonial/TestimonialSection'
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 export default function HomePage() {
+  const [showAbout, setShowAbout] = useState(false)
+  const aboutRef = useRef(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setShowAbout(true)
+          observer.disconnect() // Ngừng theo dõi sau khi hiển thị
+        }
+      },
+      { threshold: 0.2 }, // 20% component xuất hiện sẽ trigger
+    )
+
+    if (aboutRef.current) {
+      observer.observe(aboutRef.current)
+    }
+
+    return () => observer.disconnect()
+  }, [])
   return (
     <>
       {/* ====== Hero Section Start */}
@@ -28,9 +48,13 @@ export default function HomePage() {
       </SectionWrapper>
       {/* ====== Features Section End */}
       {/* ====== About Section Start */}
-      <SectionWrapper>
-        <AboutSection />
-      </SectionWrapper>
+      <div ref={aboutRef}>
+        {showAbout && (
+          <SectionWrapper>
+            <AboutSection />
+          </SectionWrapper>
+        )}
+      </div>
       {/* ====== About Section End */}
       {/* ====== CTA Section Start */}
       <SectionWrapper>
