@@ -15,9 +15,9 @@ export default function Navbar() {
   const menuItems = [
     { name: 'Trang chủ', href: '#home' },
     { name: 'Mua proxy', href: '#about' },
-    { name: 'Đội ngũ', href: '#team' },
-    { name: 'Liên hệ', href: '#contact' },
-    { name: 'Bài viết', href: '/' },
+    { name: 'Giá proxy', href: '#pricing' },
+    { name: 'FAQ', href: '#question' },
+    { name: 'Bài viết', href: '#content' },
   ]
 
   useEffect(() => {

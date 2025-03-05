@@ -4,6 +4,7 @@ import bangthong1 from '@assets/images/content/bangthong1.png'
 import proxy1 from '@assets/images/content/proxy1.jpg'
 import proxyvsvpn1 from '@assets/images/content/proxyvsvpn1.jpg'
 import socks51 from '@assets/images/content/socks51.png'
+import { Link } from 'react-router-dom'
 
 export default function NewsAndEvents() {
   const newsData = [
@@ -52,7 +53,7 @@ export default function NewsAndEvents() {
     },
   ]
   return (
-    <section className='relative z-20 overflow-hidden bg-[#F7F7F1] dark:bg-dark py-14 lg:py-20 border-t'>
+    <section id='content' className='relative z-20 overflow-hidden bg-[#F7F7F1] dark:bg-dark py-14 lg:py-20 border-t'>
       <div className='container mx-auto '>
         <div className='w-full px-4'>
           <div className='mx-auto mb-[60px] max-w-[520px] text-center'>
@@ -85,8 +86,13 @@ export default function NewsAndEvents() {
         ))}
       </div>
 
-      <div className='flex justify-center mt-10'>
-        <button className='max-w-52 bg-[#3B3B3B] px-4 py-2 rounded-lg text-white font-medium'>Xem thêm</button>
+      <div className='flex justify-center w-full mt-8 border-t pt-4'>
+        <Link
+          to={'https://app.senproxies.com/posts/news'}
+          className='hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] font-bold py-2 px-4 hover:text-[#3B3B3B] flex flex-col justify-center items-center bg-[#c2c1c1] hover:bg-[#EFEFEF] rounded-lg  max-w-[300px] w-full cursor-pointer text-normal h-11 transition-all'
+        >
+          Xem thêm
+        </Link>
       </div>
     </section>
   )

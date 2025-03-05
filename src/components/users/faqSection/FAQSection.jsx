@@ -86,6 +86,7 @@ export default function FAQSection() {
 
   return (
     <section
+      id='question'
       className='relative z-20 lg:h-screen h-[90vh] bg-compo dark:bg-dark lg:pt-20 pt-20 py-14 lg:py-20'
       // style={{
       //   background: `url(${bgFaq6})`,
