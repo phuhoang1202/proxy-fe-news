@@ -13,9 +13,8 @@ export default function Navbar() {
   const [scrolling, setScrolling] = useState(false)
 
   const menuItems = [
-    { name: 'Trang chủ', href: '/' },
+    { name: 'Trang chủ', href: '#home' },
     { name: 'Mua proxy', href: '#about' },
-    { name: 'Giá cả', href: '#pricing' },
     { name: 'Đội ngũ', href: '#team' },
     { name: 'Liên hệ', href: '#contact' },
     { name: 'Bài viết', href: '/' },
@@ -77,12 +76,19 @@ export default function Navbar() {
                 <ul className='blcok lg:flex 2xl:ml-20'>
                   {menuItems.map((item, index) => (
                     <li key={index} className='group relative'>
-                      <Link
-                        to={item.href}
-                        className='ud-menu-scroll mx-8 flex py-2 text-primaryPrdName font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10'
+                      <button
+                        onClick={() => {
+                          const element = document.getElementById(item.href.replace('#', ''))
+                          if (element) {
+                            element.scrollIntoView({ behavior: 'smooth' })
+                          }
+                        }}
+                        className={`${
+                          scrolling ? 'text-[#3B3B3B]' : 'text-white'
+                        } mx-8 flex py-2  text-primaryPrdName font-medium lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:group-hover:opacity-70 xl:ml-10`}
                       >
                         {item.name}
-                      </Link>
+                      </button>
                     </li>
                   ))}
                 </ul>
@@ -97,13 +103,13 @@ export default function Navbar() {
 
             <div className='hidden sm:flex'>
               <Link
-                to='/'
+                to='https://app.senproxies.com'
                 className='loginBtn px-[22px] py-2 text-primaryPrdName font-medium text-white hover:opacity-70'
               >
                 Đăng nhập
               </Link>
               <Link
-                to='/'
+                to='https://app.senproxies.com'
                 className='signUpBtn rounded-md bg-white bg-opacity-20 px-6 py-2 text-primaryPrdName font-medium text-white duration-300 ease-in-out hover:bg-opacity-100 hover:text-dark'
               >
                 Đăng ký

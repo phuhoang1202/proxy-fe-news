@@ -27,8 +27,11 @@ export default function FooterSection() {
 
   const menuItems3 = [
     { name: 'Bảo hành', path: '/' },
-    { name: 'Hỗ trợ 1:1', path: '/' },
-    { name: 'Liên hệ', path: '/' },
+    { name: 'Hỗ trợ 1:1', path: 'tel:0368864688' },
+    { name: 'Bài viết', path: 'https://app.senproxies.com/posts/news' },
+    { name: 'Điều kiện và điều khoản', path: 'https://app.senproxies.com/posts/term' },
+    { name: 'Chính sách hoàn tiền', path: 'https://app.senproxies.com/posts/policy' },
+    { name: 'Liên hệ', path: 'https://app.senproxies.com/posts/contact' },
   ]
 
   const socialNetwork = [
@@ -132,12 +135,12 @@ export default function FooterSection() {
                 <ul>
                   {menuItems3.map((item, index) => (
                     <li key={index}>
-                      <Link
-                        to={item.path}
+                      <a
+                        href={item.path}
                         className='mb-3 inline-block lg:text-normal text-small text-gray-7 capitalize hover:text-primary'
                       >
                         {item.name}
-                      </Link>
+                      </a>
                     </li>
                   ))}
                 </ul>
