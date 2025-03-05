@@ -103,13 +103,13 @@ export default function Navbar() {
 
             <div className='hidden sm:flex'>
               <Link
-                to='https://app.senproxies.com'
+                to='https://app.senproxies.com/auth/signin'
                 className='loginBtn px-[22px] py-2 text-primaryPrdName font-medium text-white hover:opacity-70'
               >
                 Đăng nhập
               </Link>
               <Link
-                to='https://app.senproxies.com'
+                to='https://app.senproxies.com/auth/signup'
                 className='signUpBtn rounded-md bg-white bg-opacity-20 px-6 py-2 text-primaryPrdName font-medium text-white duration-300 ease-in-out hover:bg-opacity-100 hover:text-dark'
               >
                 Đăng ký
